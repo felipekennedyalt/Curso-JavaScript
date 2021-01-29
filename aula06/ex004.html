@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        var nome = window.prompt("Qual é o seu nome:")
+        document.write(`Ola, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras.<br/>`)
+        document.write(`Seu nome em letras maiúsculas fica <strong>${nome.toUpperCase()}</strong>.<br/>`)
+        document.write(`Seu nome em letras minúsculas fica <strong>${nome.toLowerCase()}</strong>.<br/>`)
+        /*
+        escrever numeros com quantas casas decimais você quer
+        numero.toFixed(2) -- nesse caso teia até 2 casas decimais, como por exemplo 15.50 
+
+        fazer a converção do ponto para a virgula, pois a virgula é mai usada no brasil
+        numero.toFixed(2).replace('.', ',') -- exemplo: de 15.50 para 15,50
+
+        converter um numero para a moeda local do país
+        numero = 1450,50
+        numero.toLocaleString('pt-BR', {Style: 'currency', currency: 'BRL'})
+        o resultado seria
+        R$ 1,450.50
+        
+        Quando quiser mudar é só mudar a moeda, como por exemplo: 
+        numero.toLocaleString('pt-BR', {Style: 'currency', currency: 'USD'})
+        ou
+        numero.toLocaleString('pt-BR', {Style: 'currency', currency: 'EUR'})
+*/
+
+
+        numero = 1450,50
+        document.write(numero.toLocaleString('pt-BR', { Style: 'currency', currency: 'BRL' }))
+
+    </script>
+</body>
+
+</html>
