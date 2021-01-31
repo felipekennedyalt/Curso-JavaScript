@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros pasoss com DOM</title>
+    <style>
+        body {
+            background-color: rgb(175, 128, 219);
+            color: cornsilk;
+            font: normal 18pt Arial;
+
+        }
+
+        strong {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando esstudos com DOM</h1>
+    <p>Aqui o reultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> no Javacript</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+
+        // getElementsByTagName pega pela tag do elemento, e também há a possibilidade de selecionar o elemento desejado como num vetor
+        /*
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write("Está escrito asim: " + p1.innerHTML) //esse é o correto nesse caso pois também mostra a edição do html
+        */
+
+        //window.alert(p1.innerHTML)
+        //window.alert(p1.innerText) no alerta esse é o correto pos não mostra o html
+
+        // getElementById 
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...' -- mudei o conteúda usando o JavaScript
+        ou posso fazer assim:
+        window.document.getElementById('msg').innerText = "Olá!"
+        */
+
+        //getElementsByName
+        //var d = window.document.getElementsByName('msg')[0]
+        //d.innerText = "oi"
+
+        //querySelector
+        // toda classe é representada por "." e todo id por "#"
+        /*var d = window.document.querySelector('div.msg')
+        d.style.background = "blue"
+        */
+
+    </script>
+
+</body>
+
+</html>
